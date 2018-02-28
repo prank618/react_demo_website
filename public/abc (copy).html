@@ -1,0 +1,1230 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>MODEL PRESS OF INDIA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" media="screen,projection">
+    <script>
+      $(document).ready(function(){
+        var x=setInterval(function(){
+          $('.carousel').carousel('next', 1);
+        }, 3000);
+        window._inti_mm=x;
+      });
+    </script>
+    <style type="text/css">
+      .black_forced{color:black;}
+      #_ser_sb::-webkit-input-placeholder{  
+  			line-height: 4.5em;
+  			color:white;
+  			font-size:15px;
+		}
+    .allUnc{
+      text-transform: capitalize;
+    }
+    .allerMalik{
+      width:100%;
+    }
+    body{background-color: #f5f8fa;}
+    .uppercase_pratibha{text-transform: uppercase;}
+    </style>
+    <style type="text/css">
+    .Make_all_Capital_text{text-transform: uppercase;}
+    </style>
+    <script>
+      $(document).ready(function(){
+        $(window).on("changeOpacity",function(evt,data){
+          $("#_p_head").css("opacity",data);
+          $("#_p_body").css("opacity",data);
+          $("#_p_foot").css("opacity",data);
+          $("#_p_foot_1_allah").css("opacity",data);
+          $("#_p_foot_1").css("opacity",data);
+          $("#_p_foot_2").css("opacity",data);
+          $("#_p_foot_3").css("opacity",data);
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div id="__js_root_animation">
+
+    </div>
+    <div id="_p_head">
+
+    </div>
+    <script type="text/babel">
+      class SendEmail extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+
+          };
+          this._safe_zone_into_me=this._safe_zone_into_me.bind(this);
+          this.componentWillMount=this.componentWillMount.bind(this);
+          this.componentWillUnmount=this.componentWillUnmount.bind(this);
+          this._ll_send_mail=this._ll_send_mail.bind(this);
+        }
+        _ll_send_mail(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+        }
+        componentWillMount(){
+          $(window).trigger("changeOpacity",[0.1])
+        }
+        componentWillUnmount(){
+          $(window).trigger("changeOpacity",[1])
+        }
+        _safe_zone_into_me(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+        }
+        render(){
+          return (
+            <div style={{width:"99%",height:"1000px",position:"absolute",backgroundColor:"transparent",zIndex:"100"}}>
+              <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center"}}>
+                <div style={{width:"40%",display:"block",backgroundColor:"white",height:"40%",marginTop:"250px"}} >
+                  <div style={{width:"100%",height:"40px",marginBottom:"10px"}}>
+                    <div style={{width:"100%",height:"100%"}}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
+                        <i className="material-icons medium" onClick={this._safe_zone_into_me} style={{cursor:"pointer"}}>close</i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="input-field col s6 ">
+                      <input id="first_name2_ll" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai} />
+                      <label className="active" for="first_name2_ll">Your name</label>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="input-field col s6 ">
+                      <input id="first_name2_ll" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai} />
+                      <label className="active" for="first_name2_ll">Subject</label>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="input-field col s12">
+                      <textarea id="textarea1" className="materialize-textarea"></textarea>
+                      <label for="textarea1">Write mail content</label>
+                    </div>
+                  </div>
+                  <div style={{width:"100%",height:"30px",marginBottom:"10px"}}>
+                    <div style={{width:"100%",height:"100%"}}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                        <a className="waves-effect waves-light btn" onClick={this._ll_send_mail}>Send mail</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        }
+      }
+
+
+      window.addEventListener('sendEmail',(evt)=>{
+        ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+        ReactDOM.render(<SendEmail />,document.getElementById('__js_root_animation'))
+      })
+
+
+      class ServiceSuggestion extends React.Component {
+        constructor(props){
+          super(props);
+          this.state={
+            searchableArr:this.props.Search
+          };
+          this._hehe_pratibha=this._hehe_pratibha.bind(this);
+          this.componentWillReceiveProps=this.componentWillReceiveProps.bind(this);
+        }
+        _hehe_pratibha(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          let tarValPo=JSON.parse(evt.target.parentElement.lastChild.value)
+          ReactDOM.unmountComponentAtNode(document.getElementById('_head_root_animation'))
+          var event = new CustomEvent(
+					"dangerouslyOpenService",
+					{
+						detail: {
+							message: tarValPo,
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+          );
+          window.dispatchEvent(event)
+        }
+        componentWillReceiveProps(nextProps){
+          this.setState({
+            searchableArr:nextProps.Search
+          })
+        }
+        render(){
+          return (
+            <div style={{width:"35%",float:"right",position:"absolute",zIndex:"100",marginLeft:"65%",backgroundColor:"white"}}>
+              {
+                this.state.searchableArr.map( (a,b)=>{
+                  return (
+                    <div key={b} className="white black-text" style={{width:"100%",height:"30px",marginBottom:"10px"}}>
+                      <a  className="waves-effect waves-light btn white black-text" onClick={this._hehe_pratibha}>{a}</a>
+                      <input type="hidden" value={JSON.stringify(a)} />
+                    </div>
+                  )
+                } )
+              }
+            </div>
+          )
+        }
+      }
+      class PressHead extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state= {
+            domainName:"Model Press of India",
+            color:"white",
+            fontS:"large",
+            allArr:["Register book","Commercial book","Forms book","Cover book","Letter head book","Envelopes printing","Magzines and brochures","Bank passbook","Excercise book","Practical paper ,maps and graphs","Other books and annual report","Case bound"],
+            mySearchBoxText:""
+          };
+          this.__ll_change_text_sb=this.__ll_change_text_sb.bind(this);
+          this._send_my_email_pratibha=this._send_my_email_pratibha.bind(this);
+        }
+        _send_my_email_pratibha(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          var event = new CustomEvent(
+					"sendEmail",
+					{
+						detail: {
+							message: "open",
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+          );
+          window.dispatchEvent(event)
+        }
+        __ll_change_text_sb(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          let evtData=evt.target.value;
+          this.setState({
+            mySearchBoxText:evt.target.value
+          })
+          let arrtt=[];
+          let mappableMe=this.state.allArr
+          let evxData=evtData.toUpperCase();
+          mappableMe.map( (a,b)=>{
+            if (a.toUpperCase().indexOf(evxData)>0) {
+              arrtt.push(a)
+            }
+          } )
+          if (evtData != "") {
+            ReactDOM.render(<ServiceSuggestion Search={arrtt} />,document.getElementById('_head_root_animation'))
+          }else{
+            ReactDOM.unmountComponentAtNode(document.getElementById('_head_root_animation'))
+          }
+          
+        }
+        render(){
+          return (
+            <div style={{width:"100%",height:"120px",backgroundColor:"#f5f8fa"}}>
+            	<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center"}} >
+            		<div className="teal lighten-2" style={{width:"100%",height:"70%"}} >
+                  <div style={{width:"100%",height:"100%"}}>
+                    <div style={{width:"20%",height:"100%",display:"inline",float:"left"}}>
+                    </div>
+                    <div style={{width:"5%",height:"100%",display:"inline",float:"left"}}>
+                    </div>
+                    <div style={{width:"25%",height:"100%",display:"inline",float:"left"}}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+                        <img className="materialboxed" src="mpi.jpg" style={{width:"100px",height:"80px",borderRadius:"50%"}} />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span className="truncate" style={{cursor:"pointer",color:this.state.color,fontSize:this.state.fontS}} >{this.state.domainName}</span>
+                      </div>
+                    </div>
+                    <div style={{width:"10%",height:"100%",display:"inline",float:"left"}}>
+                    </div>
+                    <div style={{width:"40%",height:"100%",display:"inline",float:"left"}}>
+                      <div style={{width:"100%",height:"50%"}}>
+                        <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                          <div style={{width:"49%",height:"100%"}}>
+                            <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
+                              <a className="waves-effect waves-light btn  white-text text-darken-2 left-align truncate allUnc"><i className="material-icons left">message</i>Send Message</a>
+                            </div>
+                          </div>
+                          <div style={{width:"49%",height:"100%"}}>
+                            <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center"}}>
+                              <a className="waves-effect waves-light btn  white-text text-darken-2 left-align truncate allUnc" onClick={this._send_my_email_pratibha}><i className="material-icons left">email</i>Send Email</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{width:"100%",height:"50%"}}>
+                        <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                          <input id="_ser_sb" type="text" value={this.state.mySearchBoxText} placeholder="Search Products/Services" onChange={this.__ll_change_text_sb} style={{width:"60%",height:"90%",verticalAlign:"middle",marginBottom:"0px",color:"white"}} />
+                          <a className="waves-effect waves-light btn  white-text text-darken-2 left-align" style={{width:"50px",marginBottom:"0px"}}><i className="material-icons left">search</i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            		</div>
+            	</div>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<PressHead />,document.getElementById('_p_head'));
+    </script>
+    <div id="_head_root_animation">
+
+    </div>
+    <div id="_p_body">
+
+    </div>
+    <script type="text/babel">
+      class BarakAllahAnimation extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            greatLoveArr:[],
+            name:"Model Press of India",
+            radhituBillahi:"Model Press of India stands as a hallmark of excellence in the printing industry. It has set an incomparable benchmark in precision printing with its passion for perfection and innovation. It is backed by the latest machinery to produce world-class printed materials. ",
+            radhituBillahi_nabi:"Ours journey had begun 50 years back and ever since it has journeyed down the path of glory and success. Today, the quality of its printing is appreciated by all of our government clients in India. We feel proud and privileged to be able to not only meet but exceed the expectations of those who have put their invaluable trust in us.",
+            radhituBillahi_ya_allah:"Model Press of India was founded by Amrita Lal Roy in the year 1967. We started our journey using the printing technology acquired during pre-liberation times. However, since then, the process of phasing out the old and outdated machinery and its replacement by Offset Printing and Computer System has taken place, enabling the Press to cope up with the manifold increase in the workload that is associated with the increased tempo in developmental activities."
+          };
+          this.componentWillMount=this.componentWillMount.bind(this);
+          this._aao_madine_chale=this._aao_madine_chale.bind(this);
+          this.componentWillUnmount=this.componentWillUnmount.bind(this);
+          this.componentDidMount=this.componentDidMount.bind(this);
+        }
+        _aao_madine_chale(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+        }
+        componentDidMount(){
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          })
+        }
+        componentWillUnmount(){
+          $(document).ready(function(){
+            $(window).trigger("changeOpacity",[1])
+          })
+        }
+        componentWillMount(){
+          var that=this;
+          $(document).ready(function(){
+            $(window).trigger("changeOpacity",[0.1])
+          })
+          $.ajax({
+            url:`getMyProfileRelatedDataPratibhaPlease`,
+            type:"GET",
+            contentType:"json",
+            async:true
+          }).done((data)=>{
+            console.log(data);
+            that.setState({
+              greatLoveArr:data.ob[0]
+            })
+          }).fail((jqXhr,statusText)=>{
+            console.log(statusText)
+          })
+        }
+        render(){
+          return (
+            <div style={{width:"99%",height:"1000px",position:"absolute",backgroundColor:"transparent",zIndex:"100"}}>
+                <div style={{width:"100%",height:"60px"}}>
+                  <div style={{width:"10%",height:"100%",float:"right",marginTop:"30px",cursor:"pointer",display:"inline"}} onClick={this._aao_madine_chale}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                          <i className="medium material-icons">close</i>
+                      </div>
+                  </div>
+                  <div className="teal lighten-2" style={{width:"90%",height:"100%",float:"left",marginTop:"30px",display:"inline"}}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                          <font color="white" size={5}>
+                            Welcome to {this.state.name}
+                          </font>
+                      </div>
+                  </div>
+                </div>
+                <div style={{width:"100%",height:"940px"}}>
+                  <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center"}}>
+                    <div style={{width:"70%",height:"100%"}}>
+                      <h1>About us..</h1>
+                      <p>{this.state.radhituBillahi}</p>
+                      <p>{this.state.radhituBillahi_nabi}</p>
+                      <h1>Our History</h1>
+                      <p>{this.state.radhituBillahi_ya_allah}</p>
+                      <ul className="collapsible popout" data-collapsible="accordion">
+                        <li>
+                          <div className="collapsible-header active"><i className="material-icons">print</i>Company Profile</div>
+                          <div className="collapsible-body">
+                            <div style={{width:"100%"}}>
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Nature of business : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[0]?this.state.greatLoveArr[0]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"120px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Chairman : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                  {
+                                    (this.state.greatLoveArr[1]==undefined)?(<p></p>):(
+                                      this.state.greatLoveArr[1].split(',').map( (a,b)=>{
+                                        return (
+                                          <div key={b} style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                            <h5 className="truncate">{a}</h5>
+                                          </div>
+                                        )
+                                      } )
+                                    )
+                                  }
+                                    {/*
+                                      <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">Ashis Kumar Roy</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">Ashim Kumar Roy</h5>
+                                    </div>
+                                    */}
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"400px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Key Customer : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    {
+                                      /*
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha tooltipped">Election commission of India</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> Reserve Bank of India</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> State Bank of India</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> United Bank of India</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> Punjab sind Bank </h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> west bengal electricity board</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> west bengal pollution control board</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate uppercase_pratibha"> steel authority of india limited</h5>
+                                    </div>
+                                      */
+                                    }
+                                    {
+                                      (this.state.greatLoveArr[2]==undefined)?(<p></p>):(
+                                        this.state.greatLoveArr[2].split(',').map( (a,b)=>{
+                                          return (
+                                            <div key={b} style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                              <h5 className="truncate uppercase_pratibha">{a}</h5>
+                                            </div>
+                                          )
+                                        } )
+                                      )
+                                    }
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"100px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Registered Address : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[3]?this.state.greatLoveArr[3]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Industry : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[4]?this.state.greatLoveArr[4]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Total Number of Employees : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[5]?this.state.greatLoveArr[5]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Year of Establishment : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[6]?this.state.greatLoveArr[6]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <h1>Statutory Profile.</h1>
+                              <div style={{width:"100%",backgroundColor:"white",height:"100px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Banker : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    {
+                                      /*
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">State Bank of India</h5>
+                                    </div>
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">United bank of India</h5>
+                                    </div>
+                                      */
+                                    }
+                                    {
+                                      (this.state.greatLoveArr[7]==undefined)?(<p></p>):(
+                                        this.state.greatLoveArr[7].split(',').map( (a,b)=>{
+                                          return (
+                                            <div key={b} style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                              <h5 className="truncate">{a}</h5>
+                                            </div>
+                                          )
+                                        } )
+                                      )
+                                    }
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">PAN : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[8]?this.state.greatLoveArr[8]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Registration Authority : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[9]?this.state.greatLoveArr[9]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Registration No : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[10]?this.state.greatLoveArr[10]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Central Sales Tax No : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[11]?this.state.greatLoveArr[11]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Value Added Tax Registration No : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[12]?this.state.greatLoveArr[12]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">Excise Registration No : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[13]?this.state.greatLoveArr[13]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                              <br />
+                              <div style={{width:"100%",backgroundColor:"white",height:"60px"}}>
+                                <div style={{width:"45%",display:"inline",float:"left"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-end"}}>
+                                        <h5 className="truncate">GST No : </h5>
+                                    </div>
+                                </div>
+                                <div style={{width:"48%",display:"inline",float:"left",marginLeft:"5%"}} className="white hoverable">
+                                    <div style={{width:"100%",display:"flex",justifyContent:"flex-start"}}>
+                                        <h5 className="truncate">{this.state.greatLoveArr[14]?this.state.greatLoveArr[14]:""}</h5>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          )
+        }
+      }
+
+      class ShowServicesOnRequest extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            currentValue:this.props.CurrentValue
+          };
+          this._unmount_service_popup=this._unmount_service_popup.bind(this);
+          this.componentWillMount=this.componentWillMount.bind(this);
+          this.componentWillUnmount=this.componentWillUnmount.bind(this);
+        }
+        _unmount_service_popup(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+        }
+        componentWillMount(){
+          $(window).trigger("changeOpacity",[0.1])
+        }
+        componentWillUnmount(){
+          $(window).trigger("changeOpacity",[1])
+        }
+        render(){
+          return (
+            <div style={{width:"100%",height:"1500px",zIndex:"150",position:"absolute",backgroundColor:"transparent"}}>
+              <div style={{width:"100%",height:"100px",backgroundColor:"#4db6ac"}}>
+                <div style={{width:"75%",height:"100%",display:"inline",float:"left"}}>
+                  <div style={{width:"100%",height:"100%",display:"block"}}>
+                    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                      <p className="truncate white-text Make_all_Capital_text" style={{fontSize:"x-large"}}>{this.state.currentValue}</p>
+                    </div>
+                  </div>
+                </div>
+                <div style={{width:"25%",height:"100%",display:"inline",float:"right"}}>
+                  <div style={{width:"100%",height:"100%",display:"block"}}>
+                    <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-end",alignItems:"center"}}>
+                      <i className="material-icons medium white-text" style={{cursor:"pointer"}} onClick={this._unmount_service_popup}>close</i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style={{width:"100%",height:"1380px",marginTop:"5px"}}>
+                <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center"}}>
+                  <div style={{width:"60%"}}>
+                    <div style={{width:"100%",backgroundColor:"white",minHeight:"400px"}}>
+                      {
+                        (this.state.currentValue=="Register book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce all kind of register book. The binding of these register book comprises of Leather Bound, Pl Bound, Hard case bound and paper book</p>
+                            <img src="Register_book_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Commercial book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce all kind of Commercial book. The binding of these register book comprises of Leather Bound, Pl Bound, Hard case bound and paper book</p>
+                            <img src="Commercial_book_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Forms book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We are engaged in offering a world class printing source of different kind of Forms</p>
+                            <img src="Form_book_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Cover book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce all kind of covers as per customer's requirement</p>
+                            <img src="Cover_book_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Letter head book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce multicolor custom Logo and Text letterhead for corporate business</p>
+                            <img src="Letter_head_service.png" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Envelopes printing")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce various kind of envelope as per the client requirement which ensure maximum usability and durability</p>
+                            <img src="Envelopes_print_service.png" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Magzines and brochures")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce all type of magzines. Bifold ,Trifold brochures as well as paper supplements.Binding of the Magzines varies like center stich binding and paper binding</p>
+                            <img src="Magzine_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Bank passbook")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce bank passbook as per the bank requirement</p>
+                            <img src="Bank_passbook_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Excercise book")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce an all encomparing range of the heighest quality standard excercise book ensuring maximum usability, durability and appearance</p>
+                            <img src="Excercise_book_service.jpg" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Practical paper ,maps and graphs")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce practical papers, all types of maps and graphs</p>
+                            <img src="Maps_graph_service.gif" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Other books and annual report")?(
+                          <div>
+                            <p className="Make_all_Capital_text" style={{fontSize:"x-large"}}>We produce different kind of books, telephone directory and also produce annual reports for various renowned institutions</p>
+                            <img src="Annual_report_service.png" style={{width:"100%"}} />
+                          </div>
+                        ):false
+                      }
+                      {
+                        (this.state.currentValue=="Case bound")?(
+                          <p className="Make_all_Capital_text"></p>
+                        ):false
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        }
+      }
+
+      class PressBody extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            mTop:"0px",
+            grownUpNow:false,
+            galleryRc:["print_1.jpg","print_2.jpg","print_3.jpg","print_4.jpg","print_5.jpg"]
+          };
+          this.componentDidMount=this.componentDidMount.bind(this);
+          this._my_holder_interval=this._my_holder_interval.bind(this);
+          this._alkadi_rul_habib=this._alkadi_rul_habib.bind(this);
+          this._my_clear_interval=this._my_clear_interval.bind(this);
+          this._i_will_be_with_you=this._i_will_be_with_you.bind(this);
+          this._show_service_popup=this._show_service_popup.bind(this);
+          this.componentWillMount=this.componentWillMount.bind(this);
+          this._send_my_email_pratibha=this._send_my_email_pratibha.bind(this);
+        }
+        _send_my_email_pratibha(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          var event = new CustomEvent(
+					"sendEmail",
+					{
+						detail: {
+							message: "open",
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+          );
+          window.dispatchEvent(event)
+        }
+        componentWillMount(){
+          window.addEventListener('dangerouslyOpenService',(evt)=>{
+            ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+            let valMe=evt.detail.message;
+            ReactDOM.render(<ShowServicesOnRequest CurrentValue={valMe} />,document.getElementById('__js_root_animation'))
+          })
+        }
+        _show_service_popup(evt){
+          //evt.preventDefault();
+          //evt.stopPropagation();
+          //alert("hi")
+          ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+          let valMe=evt.target.innerText;
+          ReactDOM.render(<ShowServicesOnRequest CurrentValue={valMe} />,document.getElementById('__js_root_animation'))
+        }
+        _i_will_be_with_you(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          ReactDOM.unmountComponentAtNode(document.getElementById('__js_root_animation'))
+          ReactDOM.render(<BarakAllahAnimation />,document.getElementById("__js_root_animation"))
+        }
+        _my_clear_interval(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          //alert("leaving")
+          $(document).ready(function(){
+
+            if(window._inti_mm){
+              clearInterval(window._inti_mm);
+              var x=setInterval(function(){
+                $('.carousel').carousel('next', 1);
+              }, 3000);
+              window._inti_mm=x;
+            }else{
+              var x=setInterval(function(){
+                $('.carousel').carousel('next', 1);
+              }, 3000);
+              window._inti_mm=x;
+            }
+          });
+        }
+        _alkadi_rul_habib(evt){
+        	evt.preventDefault();
+        	evt.stopPropagation();
+        	evt.persist();
+        	
+        	var radhitu=$("#_llllloooollllpppp").height();
+        	var billahi1=$(evt.currentTarget.firstChild).height();
+        	var billahi=$("#_hohoho_products").height();
+        	console.log(radhitu);
+        	console.log(billahi1);
+        	console.log(evt.currentTarget);
+        	var that=this;
+        	if(!this.state.grownUpNow){
+	      		var event = new CustomEvent(
+					"alive", 
+					{
+						detail: {
+							message: `${radhitu+billahi1*2}px`,
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+				);
+				window.dispatchEvent(event)
+        	}else{
+	        	var event = new CustomEvent(
+					"alive", 
+					{
+						detail: {
+							message: `${radhitu-billahi1}px`,
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+				);
+				window.dispatchEvent(event)
+        	}
+        	that.setState({
+        		grownUpNow:!that.state.grownUpNow
+        	})
+        }
+        _my_holder_interval(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          //console.log(window._inti_mm);
+          if(window._inti_mm){
+            clearInterval(window._inti_mm);
+          }
+        }
+        componentDidMount(){
+        $(document).ready(function(){
+        	console.log("asalam alayka ya rasool allah")
+        		console.log($("#_hohoho_products").height());
+        	})
+          var that=this;
+          $(document).ready(function(){
+            $('.carousel').carousel({indicators: true});
+          });
+          var xc=$("#_llllloooollllpppp").height()
+          var mv=`${xc}px`;
+          /*that.setState({
+            mTop:mv
+          })*/
+        }
+        render(){
+          return (
+            <div style={{width:"100%",backgroundColor:"#f5f8fa"}}>
+              <div style={{width:"15%",backgroundColor:"#f5f8fa",display:"inline",float:"left"}}><p></p>
+              </div>
+              <div className="teal lighten-2" id="_llllloooollllpppp" style={{width:"70%",display:"inline",float:"left"}}>
+                <div style={{width:"100%"}}>
+                  <div style={{width:"100%"}}>
+                    <div className="teal lighten-2" style={{width:"33.3%",display:"inline",float:"left"}}>
+                      <a className='btn allerMalik allUnc' data-hover="true" href='#' onClick={this._i_will_be_with_you}>About us</a>
+                      <ul id='dropdownOpt1' className='dropdown-content'>
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li className="divider"></li>
+                        <li><a href="#!">three</a></li>
+                        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                      </ul>
+                    </div>
+                    <div className="teal lighten-2" style={{width:"33.3%",display:"inline",float:"left"}}>
+                      <a className='dropdown-button btn allerMalik allUnc' data-hover="false" href='#' data-activates='dropdownOptProduct1'>Products & Services</a>
+                      <ul id='dropdownOptProduct1' className='dropdown-content'>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Register book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Commercial book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Forms book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Cover book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Letter head book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Envelopes printing</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Magzines and brochures</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Bank passbook</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Excercise book</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Practical paper ,maps and graphs</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Other books and annual report</a></li>
+                        <li className="divider"></li>
+                        <li onClick={this._show_service_popup}><a href="#!">Case bound</a></li>
+                        <li className="divider"></li>
+                      </ul>
+                    </div>
+                    <div className="teal lighten-2" style={{width:"33.3%",display:"inline",float:"left"}}>
+                      <a className='dropdown-button btn allerMalik allUnc' data-hover="true" href='#' data-activates='dropdownOpt123'>Contact us</a>
+                        <ul id='dropdownOpt123' className='dropdown-content'>
+                          <li className="divider"></li>
+                          <li><a href="#!"><i className="material-icons">phone</i>Phone :  03323500745</a></li>
+                          <li className="divider"></li>
+                          <li><a href="#!" onClick={this._send_my_email_pratibha}><i className="material-icons">email</i>Email : admin@modelpressofindia.co.in</a></li>
+                          <li className="divider"></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style={{width:"100%"}}>
+                  <div style={{width:"100%"}}>
+                    <div className="carousel teal lighten-2">
+                      {
+                        this.state.galleryRc.map( (a,b) => {
+                          return (
+                            <a key={b} className="carousel-item" href="#one!"><img className="materialboxed" src={a} onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} style={{width:"350px",maxHeight:"250x"}} /></a>
+                          )
+                        } )
+                      }
+                      {/*<a className="carousel-item" href="#one!"><img className="materialboxed" src="https://lorempixel.com/250/250/nature/1" onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} /></a>
+                      <a className="carousel-item" href="#two!"><img className="materialboxed" src="https://lorempixel.com/250/250/nature/2" onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} /></a>
+                      <a className="carousel-item" href="#three!"><img className="materialboxed" src="https://lorempixel.com/250/250/nature/3" onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} /></a>
+                      <a className="carousel-item" href="#four!"><img className="materialboxed" src="https://lorempixel.com/250/250/nature/4" onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} /></a>
+                    <a className="carousel-item" href="#five!"><img className="materialboxed" src="https://lorempixel.com/250/250/nature/5" onMouseEnter={this._my_holder_interval} onMouseLeave={this._my_clear_interval} /></a>*/}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style={{width:"15%",backgroundColor:"#f5f8fa",display:"inline",float:"left"}}><p></p>
+              </div>
+
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<PressBody />,document.getElementById('_p_body'));
+    </script>
+    <div id="_p_foot">
+    </div>
+    <script type="text/babel">
+    	class FootPressOne extends React.Component {
+    		constructor(props){
+    			super(props);
+    			this.state = {
+    				broughtLifeBack:"0px",
+    				welcome:"Welcome to Model Press of India here we print for the world.",
+    				welcome2:"Model Press of India stands as a hallmark of excellence in the printing industry. It has set an incomparable benchmark in precision printing with its passion for perfection and innovation. It is backed by the latest machinery to produce world-class printed materials. \
+Ours journey had begun 50 years back and ever since it has journeyed down the path of glory and success. Today, the quality of its printing is appreciated by all of our government clients in India. We feel proud and privileged to be able to not only meet but exceed the expectations of those who have put their invaluable trust in us."
+    			};
+    			this.componentDidMount=this.componentDidMount.bind(this);
+    		}
+    		componentDidMount(){
+    			var xc=$("#_llllloooollllpppp").height()
+		          var mv=`${xc+20}px`;
+		          this.setState({
+		            broughtLifeBack:mv
+		          });
+		          var that=this;
+		          window.addEventListener("alive",(evt) => {
+		          	that.setState({
+		            	broughtLifeBack:evt.detail.message
+		          	});
+		          },true)
+    		}
+    		render(){
+    			return (
+    				<div id="_ya_habibi_ya_muhammad" style={{width:"100%",marginTop:this.state.broughtLifeBack}} >
+    					<div style={{width:"100%",height:"50px"}} >
+    						<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+    							<div style={{width:"80%",height:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+    								<font size={5}>
+	    								{
+	    									this.state.welcome
+	    								}
+    								</font>
+    							</div>
+    						</div>
+    					</div>
+    					<div style={{width:"100%"}} >
+    						<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+    							<div style={{width:"80%",height:"100%",display:"flex",justifyContent:"flex-start",alignItems:"center"}} >
+    								
+	    								{
+	    									this.state.welcome2
+	    								}
+    								
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			)
+    		}
+    	}
+    	ReactDOM.render(<FootPressOne />,document.getElementById('_p_foot'))
+    </script>
+    <br />
+    <div id="_p_foot_1_allah">
+    </div>
+    <script type="text/babel">
+      class OurClientText extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            text:"Our clients"
+          }
+        }
+        render(){
+          return (
+            <div style={{width:"100%"}} >
+              <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                <div style={{width:"80%"}}>
+                  <h1>{this.state.text}</h1>
+                </div>
+              </div>
+            </div>
+            )
+        }
+      }
+      ReactDOM.render(<OurClientText />,document.getElementById('_p_foot_1_allah'))
+    </script>
+    <br />
+    <div id="_p_foot_1">
+    </div>
+    <script type="text/babel">
+      class FootClients extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            ourClients:[{name:"Election commission of India",img:"ECI.jpg"},{name:"Reserve Bank of India",img:"rbi.png"},{name:"State Bank of India",img:"abi.jpeg"},{name:"United Bank of India",img:"ubi.png"},{name:"Punjab sind Bank",img:"psb.jpg"},{name:"west bengal electricity board",img:"wbeses.jpg"},{name:"west bengal pollution control board",img:"wbpcb.jpg"},{name:"steel authority of india limited",img:"Sail.png"},{name:"texmaco",img:"texmaco-logo.png"}]
+          };
+        }
+        render(){
+          return (
+            <div style={{width:"100%"}} >
+              <div className="carousel carousel-slider center" data-indicators="true">
+                <div className="carousel-fixed-item center">
+                  <a className="btn waves-effect white grey-text darken-text-2"><i className="material-icons left">skip_previous</i></a>
+                  <a className="btn waves-effect white grey-text darken-text-2"><i className="material-icons left">skip_next</i></a>
+                </div>
+                {
+                  this.state.ourClients.map( (a,b) => {
+                    return (
+                      <div key={b} style={{width:"50%"}} className={`carousel-item white black-text`} href="#one!">
+                        <h2 className="black-text uppercase_pratibha">{a.name}</h2>
+                        <img  src={a.img} style={{width:"200px"}} />
+                      </div>
+                    )
+                  } )
+                }
+              </div>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<FootClients />,document.getElementById('_p_foot_1'))
+    </script>
+    <br />
+    <div id="_p_foot_2">
+    </div>
+    <script type="text/babel">
+      class FootContactInfo extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            phone:"03323500745 , 9830194839, 9433165238",
+            email:"admin@modelpressofindia.co.in"
+          };
+          this._la_illah_lahillah=this._la_illah_lahillah.bind(this);
+          this._send_my_email_pratibha=this._send_my_email_pratibha.bind(this);
+        }
+        _send_my_email_pratibha(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+          var event = new CustomEvent(
+					"sendEmail",
+					{
+						detail: {
+							message: "open",
+							time: new Date(),
+						},
+						bubbles: true,
+						cancelable: true
+					}
+          );
+          window.dispatchEvent(event)
+        }
+        _la_illah_lahillah(evt){
+          evt.preventDefault();
+          evt.stopPropagation();
+        }
+        render(){
+          return (
+            <div style={{width:"100%"}} >
+              <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                <div style={{width:"80%"}}>
+                    <ul className="collapsible" data-collapsible="accordion">
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">phone</i>Contact us</div>
+                        <div className="collapsible-body"><span><i className="material-icons">phone</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Phone : {this.state.phone}</span></div>
+                        <div className="collapsible-body" onClick={this._send_my_email_pratibha}><span ><i className="material-icons">email</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Email : {this.state.email}</span></div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<FootContactInfo />,document.getElementById('_p_foot_2'))
+    </script>
+    <br />
+    <div id="_p_foot_3">
+    </div>
+    <script type="text/babel">
+      class CopyrightFoot extends React.Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            domainName:"Model Press of India",
+            term:""
+          };
+        }
+        render(){
+          return (
+            <div style={{width:"100%"}}>
+              <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                <div style={{width:"100%"}}>
+                    <ul className="collapsible" data-collapsible="accordion">
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">copyright</i>{this.state.domainName+"   All Rights Reserved (Terms of Use)"}</div>
+                        <div className="collapsible-body"><span>{this.state.term}</span></div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<CopyrightFoot />,document.getElementById('_p_foot_3'))
+    </script>
+  </body>
+</html>

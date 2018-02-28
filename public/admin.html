@@ -1,0 +1,658 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Model press of india</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" media="screen,projection">
+    <script>
+      $(document).ready(function(){
+        var x=setInterval(function(){
+          $('.carousel').carousel('next', 1);
+        }, 3000);
+        window._inti_mm=x;
+      });
+    </script>
+    <style type="text/css">
+      .black_forced{color:black;}
+      #_ser_sb::-webkit-input-placeholder{  
+  			line-height: 4.5em;
+  			color:white;
+  			font-size:15px;
+		}
+    .allUnc{
+      text-transform: capitalize;
+    }
+    .allerMalik{
+      width:100%;
+    }
+    body{background-color: #f5f8fa;}
+    </style>
+
+  </head>
+  <body>
+    <div id="_main_admin_div">
+    </div>
+    <script type="text/babel">
+        class AddGalleryImage extends React.Component {
+          constructor(props){
+            super(props);
+            this.state = {
+              statusText:"",
+              fDisabled:false,
+              initBeg:0
+            }
+            this._change_gallery_image_pratibha=this._change_gallery_image_pratibha.bind(this);
+            this._add_galery_image_to_pratibha_box=this._add_galery_image_to_pratibha_box.bind(this);
+          }
+          _change_gallery_image_pratibha(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            //alert("gallery is about to reset")
+            $.ajax({
+              url:"resetMyGalleryPratibha",
+              type:"GET",
+              async:true
+            })
+            .done((data)=>{
+              console.log(data);
+            })
+            .fail((jqXhr,statusText)=>{
+              console.log(statusText)
+            })
+          }
+          _add_galery_image_to_pratibha_box(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            evt.persist();
+            var that=this;
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var contents = event.target.result;
+                console.log(contents.byteLength);
+                var uAr=new Uint8Array(contents);
+                console.log(uAr);
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let vx=JSON.parse(this.responseText);
+                    console.log(vx)
+                    that.setState({
+                      statusText:`!!Success!! Total uploaded size = ${vx.size}`,
+                      fDisabled:false
+                    });
+                  }
+                };
+                xhttp.open("POST", "/postMyGalleryImagePratibha", true);
+                console.log(xhttp.upload)
+                xhttp.upload.addEventListener("progress",function(e) {
+                var pc = parseInt((e.loaded / e.total * 100));
+                console.log(pc);
+                that.setState({
+                  initBeg:pc
+                })
+              },false);
+              xhttp.setRequestHeader('Content-Type', 'application/json');
+              var s=JSON.stringify({val:uAr});
+              xhttp.send(s);
+            };
+            reader.onerror = function(event) {
+                console.error("File could not be read! Code " + event.target.error.code);
+            };
+            reader.readAsArrayBuffer(evt.target.files[0]);
+          }
+          render(){
+            return (
+              <div style={{width:"100%"}}>
+                <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                  <div style={{width:"50%"}}>
+                    <div style={{width:"100%"}}>
+                      <div style={{width:"100%"}}>
+                          <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                            <a className="btn white-text allUnc" onClick={this._change_gallery_image_pratibha}>Reset gallery</a>
+                          </div>
+                      </div>
+                      <div style={{width:"100%"}}>
+                        <form action="#">
+                          <div className="file-field input-field">
+                            <div className="btn">
+                              <span className="allUnc">Choose file</span>
+                              <input type="file" onChange={this._add_galery_image_to_pratibha_box} />
+                            </div>
+                            <div className="file-path-wrapper">
+                              <input className="file-path validate" type="text" />
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div>
+                        {
+                          (this.state.initBeg>0)?(
+                            <p>{this.state.initBeg} % uploaded</p>
+                          ):(
+                            false
+                          )
+                        }
+                      </div>
+                      <div>
+                        {
+                          this.state.statusText!=""?(
+                            <p>{this.state.statusText}</p>
+                          ):false
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        }
+
+
+
+
+        class AddClientImage extends React.Component {
+          constructor(props){
+            super(props);
+            this.state = {
+              statusText:"",
+              fDisabled:false,
+              initBeg:0
+            }
+            this._change_gallery_image_pratibha=this._change_gallery_image_pratibha.bind(this);
+            this._add_galery_image_to_pratibha_box=this._add_galery_image_to_pratibha_box.bind(this);
+          }
+          _change_gallery_image_pratibha(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            //alert("gallery is about to reset")
+            $.ajax({
+              url:"resetMyGalleryPratibha",
+              type:"GET",
+              async:true
+            })
+            .done((data)=>{
+              console.log(data);
+            })
+            .fail((jqXhr,statusText)=>{
+              console.log(statusText)
+            })
+          }
+          _add_galery_image_to_pratibha_box(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            evt.persist();
+            var that=this;
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var contents = event.target.result;
+                console.log(contents.byteLength);
+                var uAr=new Uint8Array(contents);
+                console.log(uAr);
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    let vx=JSON.parse(this.responseText);
+                    console.log(vx)
+                    that.setState({
+                      statusText:`!!Success!! Total uploaded size = ${vx.size}`,
+                      fDisabled:false
+                    });
+                  }
+                };
+                xhttp.open("POST", "/postMyClientImagePratibha", true);
+                console.log(xhttp.upload)
+                xhttp.upload.addEventListener("progress",function(e) {
+                var pc = parseInt((e.loaded / e.total * 100));
+                console.log(pc);
+                that.setState({
+                  initBeg:pc
+                })
+              },false);
+              xhttp.setRequestHeader('Content-Type', 'application/json');
+              var s=JSON.stringify({val:uAr});
+              xhttp.send(s);
+            };
+            reader.onerror = function(event) {
+                console.error("File could not be read! Code " + event.target.error.code);
+            };
+            reader.readAsArrayBuffer(evt.target.files[0]);
+          }
+          render(){
+            return (
+              <div style={{width:"100%"}}>
+                <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                  <div style={{width:"50%"}}>
+                    <div style={{width:"100%"}}>
+                      <div style={{width:"100%"}}>
+                          <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                            <a className="btn white-text allUnc" onClick={this._change_gallery_image_pratibha}>Reset gallery</a>
+                          </div>
+                      </div>
+                      <div style={{width:"100%"}}>
+                        <form action="#">
+                          <div className="file-field input-field">
+                            <div className="btn">
+                              <span className="allUnc">Choose file</span>
+                              <input type="file" onChange={this._add_galery_image_to_pratibha_box} />
+                            </div>
+                            <div className="file-path-wrapper">
+                              <input className="file-path validate" type="text" />
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div>
+                        {
+                          (this.state.initBeg>0)?(
+                            <p>{this.state.initBeg} % uploaded</p>
+                          ):(
+                            false
+                          )
+                        }
+                      </div>
+                      <div>
+                        {
+                          this.state.statusText!=""?(
+                            <p>{this.state.statusText}</p>
+                          ):false
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        }
+
+
+        class ProfileDetails extends React.Component {
+          constructor(props){
+            super(props);
+            this.state= {
+              NatureOfBusiness:"",
+              chairmain:"",
+              keyCustomer:"",
+              regAddress:"",
+              industry:"",
+              noOfEmployee:"",
+              yearOfStablished:"",
+              banker:"",
+              pan:"",
+              regAuthority:"",
+              regNo:"",
+              centralSalestaxNo:"",
+              vatNo:"",
+              exciseRegNo:"",
+              gstNo:""
+            }
+            this._ni_tu_mera_geet_hai=this._ni_tu_mera_geet_hai.bind(this);
+            this._ni_tu_mera_geet_hai_2=this._ni_tu_mera_geet_hai_2.bind(this);
+            this._ni_tu_mera_geet_hai_3=this._ni_tu_mera_geet_hai_3.bind(this);
+            this._ni_tu_mera_geet_hai_4=this._ni_tu_mera_geet_hai_4.bind(this);
+            this._ni_tu_mera_geet_hai_5=this._ni_tu_mera_geet_hai_5.bind(this);
+            this._ni_tu_mera_geet_hai_6=this._ni_tu_mera_geet_hai_6.bind(this);
+            this._ni_tu_mera_geet_hai_7=this._ni_tu_mera_geet_hai_7.bind(this);
+            this._ni_tu_mera_geet_hai_8=this._ni_tu_mera_geet_hai_8.bind(this);
+            this._ni_tu_mera_geet_hai_9=this._ni_tu_mera_geet_hai_9.bind(this);
+            this._ni_tu_mera_geet_hai_10=this._ni_tu_mera_geet_hai_10.bind(this);
+            this._ni_tu_mera_geet_hai_11=this._ni_tu_mera_geet_hai_11.bind(this);
+            this._ni_tu_mera_geet_hai_12=this._ni_tu_mera_geet_hai_12.bind(this);
+            this._ni_tu_mera_geet_hai_13=this._ni_tu_mera_geet_hai_13.bind(this);
+            this._ni_tu_mera_geet_hai_14=this._ni_tu_mera_geet_hai_14.bind(this);
+            this._ni_tu_mera_geet_hai_15=this._ni_tu_mera_geet_hai_15.bind(this);
+            this._replicate_data_to_db=this._replicate_data_to_db.bind(this);
+          }
+          _replicate_data_to_db(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            let data={
+              NatureOfBusiness:this.state.NatureOfBusiness,
+              chairmain:this.state.chairmain,
+              keyCustomer:this.state.keyCustomer,
+              regAddress:this.state.regAddress,
+              industry:this.state.industry,
+              noOfEmployee:this.state.noOfEmployee,
+              yearOfStablished:this.state.yearOfStablished,
+              banker:this.state.banker,
+              pan:this.state.pan,
+              regAuthority:this.state.regAuthority,
+              regNo:this.state.regNo,
+              centralSalestaxNo:this.state.centralSalestaxNo,
+              vatNo:this.state.vatNo,
+              exciseRegNo:this.state.exciseRegNo,
+              gstNo:this.state.gstNo
+            }
+            console.log(data)
+            $.ajax({
+              url:`saveMyAllDataRegardingProfilePratibhaPlease?data=${JSON.stringify(data)}`,
+              type:"GET",
+              contentType:"json",
+              async:true
+            }).done((data)=>{
+              Materialize.toast('data saved to db successfully ', 4000) 
+            }).fail((jqXhr,statusText)=>{
+              Materialize.toast('Some exception occured please try after 30 min', 4000) 
+              console.log(statusText)
+            })
+          }
+          _ni_tu_mera_geet_hai(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            console.log(evt.target)
+            console.log(evt.currentTarget)
+            console.log(evt.target.value)
+            this.setState({
+              NatureOfBusiness:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_2(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              chairmain:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_3(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              keyCustomer:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_4(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              regAddress:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_5(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              industry:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_6(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              noOfEmployee:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_7(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              yearOfStablished:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_8(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              banker:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_9(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              pan:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_10(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              regAuthority:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_11(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              regNo:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_12(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              centralSalestaxNo:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_13(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              vatNo:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_14(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              exciseRegNo:evt.target.value
+            })
+          }
+          _ni_tu_mera_geet_hai_15(evt){
+            evt.preventDefault();
+            evt.stopPropagation();
+            this.setState({
+              gstNo:evt.target.value
+            })
+          }
+          render(){
+            return (
+              <div style={{width:"100%"}}>
+                <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
+                  <div className="white" style={{display:"block",width:"40%"}}>
+                    <div className="row">
+                      <div className="input-field col s6 ">
+                        <input id="first_name2_1" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai} />
+                        <label className="active" for="first_name2_1">Nature of business</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_2" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_2} />
+                        <label className="active" for="first_name2_2">Chairman</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_4" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_3} />
+                        <label className="active" for="first_name2_4">Key Customer</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_5" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_4} />
+                        <label className="active" for="first_name2_5">Registered Address</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_6" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_5} />
+                        <label className="active" for="first_name2_6">Industry</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_7" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_6} />
+                        <label className="active" for="first_name2_7">Total Number of Employees</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_8" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_7} />
+                        <label className="active" for="first_name2_8">Year of Establishment</label>
+                      </div>
+                    </div>
+                    <p>Statutory Profile</p>
+                    <br />
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_9" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_8} />
+                        <label className="active" for="first_name2_9">Banker</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_10" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_9} />
+                        <label className="active" for="first_name2_10">PAN</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_11" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_10} />
+                        <label className="active" for="first_name2_11">Registration Authority</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_12" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_11} />
+                        <label className="active" for="first_name2_12">Registration No</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_13" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_12} />
+                        <label className="active" for="first_name2_13">Central Sales Tax No</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_13" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_13} />
+                        <label className="active" for="first_name2_13">Value Added Tax Registration No</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_13" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_14} />
+                        <label className="active" for="first_name2_13">Excise Registration No</label>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="input-field col s6">
+                        <input id="first_name2_13" type="text" className="validate" onChange={this._ni_tu_mera_geet_hai_15} />
+                        <label className="active" for="first_name2_13">GST No</label>
+                      </div>
+                    </div>
+                    <div style={{width:"100%",height:"35px"}}>
+                      <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                        <a className="waves-effect waves-light btn white black-text" style={{textTransform:"capitalize"}} onClick={this._replicate_data_to_db}>Save to db</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        }
+
+
+
+
+        class AdminControll extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {
+                  mayuri:0
+                };
+                this.componentWillMount=this.componentWillMount.bind(this);
+                this._alhamdulillah=this._alhamdulillah.bind(this);
+            }
+            componentWillMount(){
+                    var that = this;
+                    var promptData=window.prompt("Please enter password to continue","");
+                    console.log(promptData);
+                    console.log(promptData!=null)
+                    if(promptData!=null){
+                      
+                      if (promptData=="arpanroy") {
+                        that.setState({
+                          mayuri:1
+                        })
+                      }
+                      else{
+                        that.setState({
+                          mayuri:0
+                        })
+                        Materialize.toast('Please authorized yourself first', 4000)
+                      }
+                    }
+            }
+            _alhamdulillah(evt){
+                evt.preventDefault();
+                evt.stopPropagation();
+                //alert(evt.target.innerText)
+                let evtTargetData=evt.target.innerText.toString();
+                switch (evtTargetData) {
+                  case "Add Gallery Image":
+                      ReactDOM.unmountComponentAtNode(document.getElementById('_mm_alhamdullillah'))
+                      ReactDOM.render(<AddGalleryImage />,document.getElementById('_mm_alhamdullillah'))
+                      break;
+                  case "Change Main Text":
+                      
+                      break;
+                  case "Change Main Caption":
+                      
+                      break;
+                  case "Add client Image":
+                      ReactDOM.unmountComponentAtNode(document.getElementById('_mm_alhamdullillah'))
+                      ReactDOM.render(<AddClientImage />,document.getElementById('_mm_alhamdullillah'))
+                      break;
+                  case "Edit profile":
+                      ReactDOM.unmountComponentAtNode(document.getElementById('_mm_alhamdullillah'))
+                      ReactDOM.render(<ProfileDetails />,document.getElementById('_mm_alhamdullillah'))
+                      break;
+                  default:
+                      break;
+              }
+              
+            }
+            render(){
+                return (
+                    <div className="teal" style={{width:"100%",height:"1000px"}}>
+                        {
+                          (this.state.mayuri==1)?(
+                            <div style={{width:"100%",height:"350px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                                <a style={{width:"500px"}} className='dropdown-button btn white teal-text allUnc' href='#' data-activates='dropdown1'>Please select admin action</a>
+                                <ul id='dropdown1' className='dropdown-content'>
+                                    <li className="divider"></li>
+                                    <li><a href="#!" onClick={this._alhamdulillah}>Add Gallery Image</a></li>
+                                    <li className="divider"></li>
+                                    <li><a href="#!" onClick={this._alhamdulillah}>Change Main Text</a></li>
+                                    <li className="divider"></li>
+                                    <li><a href="#!" onClick={this._alhamdulillah}>Change Main Caption</a></li>
+                                    <li className="divider"></li>
+                                    <li><a href="#!" onClick={this._alhamdulillah}>Add client Image</a></li>
+                                    <li className="divider"></li>
+                                    <li><a href="#!" onClick={this._alhamdulillah}>Edit profile</a></li>
+                                    <li className="divider"></li>
+                                </ul>
+                            </div>
+                          ):
+                          (
+                            <p className="white black-text">Please authorized yourself first</p>
+                          )
+                        }
+                        <div id="_mm_alhamdullillah" style={{width:"100%",overflowY:"scroll",height:"500px"}}>
+                        </div>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<AdminControll />,document.getElementById('_main_admin_div'))
+    </script>
+  </body>
+</html>
